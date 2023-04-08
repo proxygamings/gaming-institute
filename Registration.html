@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body bgcolor="00ffff">
+<h1>Registration Form</h1><br>
+	<form name="ok" onsubmit="im()">
+		<fieldset >
+			<legend aling="CENTER"><strong>User Personal Information</strong></legend>
+			<div style="margin-left: 55px;">
+				<label>Enter Your Full Name</label><br>
+				<input type="text" name="p1"placeholder="Enter Your Name"><br>
+				<label>Enter Your Father Name</label><br>
+				<input type="text" name="p2"><br>
+				<label>Enter Your Mother Name</label><br>
+				<input type="text" name="p3"><br><br>
+				<label>Enter Your Email ID</label><br>
+				<input type="Email" name="p4"placeholder="abc@Gmail.com"><br>
+				<label>Enter Your Password</label><br>
+				<input type="Password" id="sk" name="P5">
+				<!-- <i class="fa-fa-eye" id="pk" onclick="show()"></i> -->
+				<input type="checkbox"  onclick="show()"> Show password<br>
+				<label>Conform Password</label><br>
+				<input type="Password" id="ss"name="P6">
+				<input type="checkbox" onclick="home()"> Show password<br><br>
+				<label>Select Your Gender </label><br>
+				<input type="radio" name="Gender">Male<br>
+				<input type="radio" name="Gender">Female<br>
+				<input type="radio" name="Gender">Others<br>
+			<br>Enter Your Address:<br>
+			<textarea></textarea><br><br>
+			<label>cast:</label><br>
+			<select>
+				<option>---Select Cast---</option>
+				<option>Gen</option>
+				<option>sc</option>
+				<option>St</option>
+				<option>Obc</option>
+			</select><br><br>
+			<label>D.O.B</label><br>
+			<input type="date" name="Birthday"><br><br>
+			<input type="submit" value="Submit" >
+			</div>
+		</fieldset>
+	</form>
+		</nav>
+	</div>
+<script >
+	function show()
+	{
+		let s;
+		s=document.getElementById("sk")
+		if (s.type=="password") 
+		{
+			s.type="text";
+		}
+		else
+		{
+			s.type="password";
+
+		}
+	}
+	function home()
+	{
+		let p;
+		p=document.getElementById("ss")
+		if (p.type=="password") 
+		{
+			p.type="text";
+		}
+		else
+		{
+			p.type="password";
+
+		}
+	}
+	
+</script>
+<script type="text/javascript">
+	function im() {
+		var nam=ok.p1.value;
+		var fnam=ok.p2.value;
+		 var mnam=ok.p3.value;
+		 var em=ok.p4.value;
+		var pas1=ok.P5.value;
+		var pas2=ok.P6.value;
+		if (nam==""||nam==null )
+		 {
+		 	alert("Fill  your name");
+		 }
+		 else if (fnam==""||fnam==null)
+		  {
+		  	alert("Fill your father name");
+		  }
+		   else if (mnam==""||mnam==null)
+		  {
+		  	alert("Fill your mother name");
+		  }
+		   else if (em=="")
+		  {
+		  	alert("enter your EMAIL ID");
+		  }
+		   else if (pas1==""&&pas2=="")
+		  {
+		  	alert("Enter your password");
+		  }
+		   else if (pas1!=pas2)
+		  {
+		  	alert("Enter your correct password");
+		  }
+		  else if (pas1.search(/[0-9]/)==-1)
+		   {
+		   	alert("pass start must be use 0-9 value");
+		   }
+	}
+</script>
+</body>
+</html>
